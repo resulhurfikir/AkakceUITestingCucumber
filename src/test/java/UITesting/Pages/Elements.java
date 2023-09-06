@@ -26,8 +26,6 @@ public class Elements extends Methods {
     public WebElement hataliGirisTamamButonu;
     @FindBy(css = "i>[href='/akakcem/']")
     public WebElement girisDogrulama;
-    @FindBy(id = "HCM_v8")
-    public WebElement kategorigenel;
     @FindBy(id = "H_c_v8")
     public WebElement kategoriler;
     @FindBy(xpath = "(//a[text()='Elektronik'])[1]")
@@ -38,8 +36,6 @@ public class Elements extends Methods {
     public WebElement markaHp;
     @FindBy(css = "[data-id='1181397']")
     public WebElement ekranKartiRTX4060;
-    @FindBy(css = "[class='f_v8 n_v8']")
-    public WebElement sagaKaydirIkonu;
     @FindBy(xpath = "//span[text()='Intel Core i7']")
     public WebElement islemciI7;
     @FindBy(linkText = "EN YÜKSEK FİYAT")
@@ -96,8 +92,6 @@ public class Elements extends Methods {
     public List<WebElement> uruneGitButonlari;
     @FindBy(css = "[class='pdt_v8']>h1")
     public WebElement randomSecilenUrunIsmi;
-    @FindBy (css = "[data-sortid]")
-    public List<WebElement> dataSortId;
 
 
     public WebElement getWebElement(String element) {
