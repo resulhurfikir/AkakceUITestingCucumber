@@ -16,11 +16,11 @@ import static org.testng.Assert.*;
 public class Methods extends DriverManager {
 
     public Methods() {
-        PageFactory.initElements(DriverManager.getDriver(), this);
+        PageFactory.initElements(getDriver(), this);
     }
 
-    WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(20));
-    JavascriptExecutor js = (JavascriptExecutor) DriverManager.getDriver();
+    WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(20));
+    JavascriptExecutor js = (JavascriptExecutor) getDriver();
 
 
     public void clickFunction(WebElement element) {
@@ -38,7 +38,7 @@ public class Methods extends DriverManager {
     }
 
     public void scrollToElement(WebElement element) {
-        JavascriptExecutor js = (JavascriptExecutor) DriverManager.getDriver();
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
         js.executeScript("arguments[0].scrollIntoView(false);", element);
     }
 
@@ -65,7 +65,7 @@ public class Methods extends DriverManager {
     
 
     public void actions(WebElement element, String str) {
-        Actions actions = new Actions(DriverManager.getDriver());
+        Actions actions = new Actions(getDriver());
         switch (str.toLowerCase()) {
             case "hover":
                 wait.until(ExpectedConditions.visibilityOf(element));

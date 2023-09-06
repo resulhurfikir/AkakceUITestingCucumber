@@ -10,7 +10,7 @@ import java.util.List;
 public class Elements extends Methods {
 
     public Elements() {
-        PageFactory.initElements(DriverManager.getDriver(), this);
+        PageFactory.initElements(getDriver(), this);
     }
 
 
