@@ -44,8 +44,6 @@ public class Elements extends Methods {
     public WebElement islemciI7;
     @FindBy(linkText = "EN YÜKSEK FİYAT")
     public WebElement siralaEnYuksekFiyat;
-    @FindBy(linkText = "EN DÜŞÜK FİYAT")
-    public WebElement siralaEnDusukFiyat;
     @FindBy(xpath = "(//h3[@class='pn_v8'])[1]")
     public WebElement enYuksekFiyatliUrun;
     @FindBy(xpath = "//span[@class='ufo_v8']")
@@ -98,6 +96,9 @@ public class Elements extends Methods {
     public List<WebElement> uruneGitButonlari;
     @FindBy(css = "[class='pdt_v8']>h1")
     public WebElement randomSecilenUrunIsmi;
+    @FindBy (css = "[data-sortid]")
+    public List<WebElement> dataSortId;
+
 
     public WebElement getWebElement(String element) {
         switch (element) {

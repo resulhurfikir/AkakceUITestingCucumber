@@ -21,4 +21,9 @@ public class _05_TaskGivenByAkakceSteps {
     public void verifyThatTheProductThatIsChosenRandomlyIsInTheWatchList() {
         e.assertByText(name,e.urunler);
     }
+
+    @And("Click on the *takip butonu* to add the product")
+    public void clickOnTheTakipButonuToAddTheProduct() {
+        e.jsClickFunction(e.takipButonu);
+    }
 }

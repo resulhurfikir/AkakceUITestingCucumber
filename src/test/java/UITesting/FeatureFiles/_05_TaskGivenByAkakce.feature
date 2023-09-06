@@ -14,7 +14,7 @@ Feature: This case was prepared for Akakce
     And Click on the Element
       | searchIconu |
     And Choose a product from the result list randomly and click on it
-    And Click on the *takip butonu* to add the product into the watch list
+    And Click on the *takip butonu* to add the product
     And Click on the *Takip Lisesi Iconu* to go to the watch list
     Then Verify that the product that is chosen randomly is in the watch list
 

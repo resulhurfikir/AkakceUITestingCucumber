@@ -1,6 +1,7 @@
 package UITesting.StepDefinitions;
 
 import UITesting.Pages.Elements;
+import UITesting.Utilities.ConfigurationReader;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.WebElement;
@@ -39,6 +40,7 @@ public class _02_WatchListSteps {
 
     @And("Click on the *takip butonu* to add the product into the watch list")
     public void clickOnTheTakipButonuToAddTheProductIntoTheWatchList() {
+        e.waitUrl(ConfigurationReader.getProperty("waitUrl"));
         e.jsClickFunction(e.takipButonu);
 
     }

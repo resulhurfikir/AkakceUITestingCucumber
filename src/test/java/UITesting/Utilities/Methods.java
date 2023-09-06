@@ -110,7 +110,6 @@ public class Methods extends DriverManager {
     }
 
     public String getText(WebElement element) {
-        wait.until(ExpectedConditions.visibilityOf(element));
         return element.getText();
     }
 
@@ -130,8 +129,8 @@ public class Methods extends DriverManager {
                 jsClickFunction(sonrakiSayfa.get(0));
         } while (enSonSayfa.size() < 1);
         boolean flag = true;
-        int counterFail = 1;
-        int counterGeneral = 1;
+        int counterFail = 0;
+        int counterGeneral = 0;
         for (String urunAdi : sonucUrunleri) {
             if (!urunAdi.toLowerCase().contains(arananKelime.toLowerCase())) {
                 flag = false;
@@ -153,4 +152,11 @@ public class Methods extends DriverManager {
     public int randomGenerator(int max) {
         return (int) (Math.random() * max);
     }
+
+
+    public  void  waitUrl(String url){
+        wait.until(ExpectedConditions.urlToBe(url));
+    }
+
+
 }
